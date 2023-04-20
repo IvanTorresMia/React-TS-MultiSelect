@@ -16,7 +16,7 @@
 }
 
 .value {
-    flex-grow: 1 ;
+    flex-grow: 1;
 }
 
 .clear-btn {
@@ -26,7 +26,7 @@
     outline: none;
     cursor: pointer;
     padding: 0;
-    font-size: 1.25 em;
+    font-size: 10.25 em;
 }
 
 .clear-btn:focus,
@@ -51,14 +51,14 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    /* display: none;  */
+    display: none; 
     max-height: 15em;
     overflow-y: auto;
     border: .05em solid #777;
     border-radius: .25em;
     width: 100%;
     left: 0;
-    top: calc(100% + 25em);
+    top: calc(100% + 1em);
     background-color: white;
     z-index: 100;
 }
@@ -77,6 +77,6 @@
     color: white;
 }
 
-.option.selectted {
+.option.selected {
     background-color: hsl(200, 100%, 70%);
 } 
