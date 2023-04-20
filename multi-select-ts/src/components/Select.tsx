@@ -1,26 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import styles from "./select.module.css";
+import styles from "../styles/select.module.css";
+import { SelectOption, SelectProps } from "../types/selectTypes";
 
-export type SelectOption = {
-  label: String;
-  value: number | string;
-};
-
-type MultipleSelectProps = {
-  multiple: true;
-  value: SelectOption[];
-  onChange: (value: SelectOption[]) => void;
-};
-
-type SingleSelectProps = {
-  multiple?: false;
-  value?: SelectOption;
-  onChange: (value: SelectOption | undefined) => void;
-};
-
-type SelectProps = {
-  options: SelectOption[];
-} & (SingleSelectProps | MultipleSelectProps);
 
 export function Select({ multiple, value, onChange, options }: SelectProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,9 +52,9 @@ export function Select({ multiple, value, onChange, options }: SelectProps) {
             setHighlightedIndex(newValue);
           }
           break;
-          case "Escape":
-            setIsOpen(false);
-            break;
+        case "Escape":
+          setIsOpen(false);
+          break;
       }
     };
 
